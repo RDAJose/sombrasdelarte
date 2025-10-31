@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sombras del Arte — Cine</title>
+  <meta name="description" content="Sección de cine: reseñas, listas y tráilers." />
+  <link rel="icon" href="img/logoweb.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="inicio-cine">
+
+  <!-- ▸ HEADER a ancho completo -->
+  <header>
+    <div class="header-container">
+      <figure class="logo">
+        <img src="img/logoweb.png" alt="Sombras del Arte">
+      </figure>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html"><span class="ico" aria-hidden="true">🏠</span>INICIO</a></li>
+          <li><a href="cine.html" class="active"><span class="ico" aria-hidden="true">🎬</span>CINE</a></li>
+          <li><a href="literatura.html"><span class="ico" aria-hidden="true">📚</span>LITERATURA</a></li>
+          <li><a href="contacto.html"><span class="ico" aria-hidden="true">✉️</span>CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ▸ CONTENIDO centrado -->
+  <div class="page">
+    <main>
+      <h1 class="page-title">Cine</h1>
+
+      <!-- ▸ LISTAS -->
+      <section aria-labelledby="listados" class="surface">
+        <h2 id="listados">Listas</h2>
+        <article>
+          <h3>Top 5 — <time datetime="2025">2025</time></h3>
+          <ol>
+            <li>Inmaculate — 2025</li>
+            <li>Summer of 84 — 2018</li>
+            <li>The Lighthouse — 2019</li>
+            <li>The Monkey — 2025</li>
+            <li>The Witch — 2015</li>
+          </ol>
+        </article>
+
+        <article>
+          <h3>Estrenos</h3>
+          <ul>
+            <li>Weapons — Verano 2025</li>
+            <li>Nosferatu — Invierno 2025</li>
+            <li>The Black Phone — Octubre 2025</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ▸ TRÁILER (con fondo de imagen y velo, CSS) -->
+      <section aria-labelledby="trailer-cine">
+        <h2 id="trailer-cine">Tráiler</h2>
+        <figure>
+          <video controls preload="metadata" poster="img/thewitch.jpg">
+            <source src="media/la_bruja.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+          </video>
+          <figcaption>
+            Tráiler en YouTube:
+            <a href="https://www.youtube.com/watch?v=-FOvtaZQRA4" target="_blank" rel="noopener">
+              https://www.youtube.com/watch?v=-FOvtaZQRA4
+            </a>
+          </figcaption>
+        </figure>
+        <aside>
+          <p>
+            Curiosidad: La cabra <em>Black Philip</em> hirió a Ralph Ineson al inicio del rodaje,
+            lo que llevó a descartar muchas escenas planeadas con ella.
+          </p>
+        </aside>
+      </section>
+
+      <!-- ▸ ENLACES INTERNOS -->
+      <section aria-labelledby="enlaces-cine" class="surface">
+        <h2 id="enlaces-cine">Enlaces internos</h2>
+        <p>Ir a la <a href="#listados">sección de listas</a> o a la <a href="index.html#cita">cita en inicio</a>.</p>
+      </section>
+    </main>
+
+    <!-- ▸ FOOTER -->
+    <footer>
+      <p>
+        <a href="#inicio-cine">Volver arriba</a> ·
+        © Sombras del Arte <time datetime="2025">2025</time>
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>

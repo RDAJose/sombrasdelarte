@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sombras del Arte — Inicio</title>
+  <meta name="description" content="Sombras del Arte: cine, literatura y más." />
+  <meta name="keywords" content="cine, literatura, arte, cultura" />
+  <link rel="icon" href="img/logoweb.png" type="image/png" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+
+  <!-- HEADER-->
+  <header>
+    <div class="header-container">
+      <figure class="logo">
+        <img src="img/logoweb.png" alt="Sombras del Arte">
+      </figure>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" class="active"><span class="ico" aria-hidden="true">🏠</span>INICIO</a></li>
+          <li><a href="cine.html"><span class="ico" aria-hidden="true">🎬</span>CINE</a></li>
+          <li><a href="literatura.html"><span class="ico" aria-hidden="true">📚</span>LITERATURA</a></li>
+          <li><a href="contacto.html"><span class="ico" aria-hidden="true">✉️</span>CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO centrado -->
+  <div class="page">
+    <main>
+      <!-- ▸ TÍTULO DE PÁGINA (alineado con márgenes) -->
+      <h1 class="page-title">Color Out of Space</h1>
+      <p>Después de que un meteorito aterriza en el patio delantero de su granja, Nathan Gardner y su familia luchan contra un organismo extraterrestre mutante que infecta sus mentes y cuerpos, transformando su tranquila vida en una pesadilla tecnicolor.</p>
+      <p> <mark>Aquí podréis encontrar el trailer y la portada de la película</mark></p>
+      <!-- ▸ HERO con vídeo (gradiente + medios centrados) -->
+      <section id="trailer">
+        <h2>Tráiler</h2>
+        <figure>
+          <video controls preload="metadata" poster="img/coloroutofspace.jpg">
+            <source src="media/color_out_of_space.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+          </video>
+          <figcaption>
+            Tráiler en YouTube:
+            <a href="https://www.youtube.com/watch?v=RfYAXMwCpk0" target="_blank" rel="noopener">
+              https://www.youtube.com/watch?v=RfYAXMwCpk0
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ▸ ACCESOS (bloque surface + grid) -->
+      <section aria-labelledby="explora" class="surface">
+        <span class="kicker">explora</span>
+        <h2 id="explora">Explora</h2>
+        <div class="grid">
+          <article class="surface">
+            <h3>Explora Cine</h3>
+            <p>Descubre las mejores películas de terror de todos los tiempos.</p>
+            <p><a href="cine.html#inicio-cine">Entrar</a></p>
+          </article>
+
+          <article class="surface">
+            <h3>Explora Literatura</h3>
+            <p>Explora los títulos más oscuros de finales del siglo XIX.</p>
+            <p><a href="literatura.html#inicio-literatura">Entrar</a></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ▸ DESTACADOS (imagen + datos) -->
+      <section aria-labelledby="destacados">
+        <h2 id="destacados">Destacados</h2>
+        <figure>
+          <img src="img/abadia.jpg" alt="Abadía en el Robledal — Caspar David Friedrich" />
+          <figcaption>
+            Caspar David Friedrich — <cite>Abadía en el Robledal</cite> (1809).
+          </figcaption>
+        </figure>
+        <ul>
+          <li><strong>Obra — Autor</strong><br><span>Caspar David Friedrich</span></li>
+          <li><strong>Título</strong><br><span>Abadía en el Robledal</span></li>
+          <li><strong>Breve descripción</strong><br>
+            <span>“Abadía en el robledal” representa las ruinas de una abadía gótica en un bosque sombrío.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ▸ CITA -->
+      <section aria-labelledby="cita">
+        <h2 id="cita">Cita literaria</h2>
+        <figure>
+          <blockquote cite="literatura.html#fuente-cita">
+            <p>“Hay cosas más temibles que la muerte, y entre ellas está lo que vive eternamente sin alma”.</p>
+          </blockquote>
+          <figcaption>Bram Stoker — Ver <a href="literatura.html#fuente-cita">fuente</a>.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ▸ AUDIO -->
+      <section aria-labelledby="audio">
+        <h2 id="audio">Pista de audio</h2>
+        <audio controls>
+          <source src="media/melodias_de_terror.mp3" type="audio/mpeg" />
+          Tu navegador no soporta audio.
+        </audio>
+        <p>
+          Fuente/escucha en SoundCloud:
+          <a href="https://soundcloud.com/rdajose/melodias-de-terror-w-reunion-de-arte" target="_blank" rel="noopener">
+            https://soundcloud.com/rdajose/melodias-de-terror-w-reunion-de-arte
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <!-- ▸ FOOTER (tabla + créditos) -->
+    <footer>
+      <table>
+        <caption>Navegación rápida</caption>
+        <thead>
+          <tr><th>Sección</th><th>Enlace</th><th>Notas</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contacto</td>
+            <td><a href="contacto.html#form">Ir</a></td>
+            <td>Formulario</td>
+          </tr>
+          <tr>
+            <td>Redes</td>
+            <td><a href="contacto.html#redes">Ver</a></td>
+            <td>Externas</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <a href="#top">Volver arriba</a> ·
+        <span>© Sombras del Arte <time datetime="2025">2025</time></span>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

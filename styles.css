@@ -1,0 +1,201 @@
+/* =========================================================
+   01) Tema (Grey / Blue-Grey) + tokens
+   ========================================================= */
+:root{
+  --bg:#263238;        /* fondo principal (blue-grey 900) */
+  --fg:#ECEFF1;        /* texto claro */
+  --muted:#B0BEC5;     /* texto secundario */
+  --primary:#90A4AE;   /* acento/hover/active */
+
+  --sfc1:#37474F;      /* superficie (cards) */
+  --sfc2:#455A64;      /* banda (header/secciones) */
+  --line:rgba(255,255,255,.12);
+
+  --radius:8px;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem;
+  --w:1120px;          /* ancho máx. de página */
+}
+
+/* =========================================================
+   02) Reset mínimo + base
+   ========================================================= */
+*{ box-sizing: border-box; }
+html{
+  font-size:100%;
+  text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin: 0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Roboto",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  line-height:1.6;
+}
+
+/* Contenedor que centra todo el contenido de cada página */
+.page{
+  max-width:var(--w);
+  margin-inline:auto;
+  padding-inline:clamp(16px,4vw,24px);
+}
+header, nav, main, footer{ padding-block:var(--s2); }
+main{ display:grid; gap:var(--s3); }
+
+/* =========================================================
+   03) Tipografía + enlaces + foco
+   ========================================================= */
+h1, h2, h3{ margin:0 0 var(--s2); line-height:1.2; color:var(--fg); }
+h1{
+  font-family:"Courier New",Courier,ui-monospace,Menlo,Consolas,"Liberation Mono",monospace;
+  font-weight:700; letter-spacing:.01em;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+}
+/* h2/h3 heredan Roboto del body */
+a{ color:var(--primary); text-decoration:none; }
+a:hover, a:focus-visible{ text-decoration:underline; }
+:focus-visible{ outline:3px solid var(--primary); outline-offset:2px; }
+
+/* =========================================================
+   04) Header: logo a la izquierda / nav a la derecha
+   ========================================================= */
+header{
+  background:var(--sfc2);
+  border-bottom:1px solid var(--line);
+  margin: 0;
+  margin-block: var(--s2);
+}
+.header-container{
+  display:flex; justify-content:space-between; align-items:center;
+  max-width:var(--w); margin:0 auto;
+  padding-inline:clamp(16px,4vw,24px);
+}
+.logo img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   05) Navegación (centrada, accesible, sin subrayado)
+   ========================================================= */
+nav ul{
+  list-style:none; margin:0; padding:0;
+  display:flex; flex-wrap:wrap; gap:clamp(12px,2vw,20px);
+  justify-content:center;
+}
+nav a{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:48px; min-height:48px;              /* objetivo táctil mínimo */
+  padding:.5rem 1rem;
+  border-radius:var(--radius);                   /* botón acorde al tema */
+  border:1px solid transparent;
+  color:var(--fg); font-weight:500;
+  text-decoration:none;
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+}
+nav a:hover, nav a:focus-visible{
+  background:var(--primary); color:var(--bg); border-color:var(--primary);
+  text-decoration:none; transform:translateY(-1px);
+}
+nav a.active{
+  background:var(--primary); color:var(--bg); border-color:var(--primary);
+}
+nav a .ico{
+  margin-right:.4rem;
+  font-size:1rem;
+  line-height:1;
+  display:inline-block;
+}
+
+/* =========================================================
+   06) Bloques (superficies) y pequeños labels
+   ========================================================= */
+.surface{
+  background:var(--sfc1);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:var(--s3);
+}
+.band{
+  background:var(--sfc2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:var(--s2) 0;
+}
+.kicker{
+  display:inline-block;
+  font-size:.8rem; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); background:rgba(255,255,255,.08);
+  border-radius:999px; padding:.2rem .6rem; margin-bottom:.5rem;
+}
+
+/* =========================================================
+   07) Grids responsive sencillos (cards/listas)
+   ========================================================= */
+.grid{ display:grid; gap:var(--s3); grid-template-columns:1fr; }
+@media (min-width:768px){ .grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1024px){ .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+
+/* =========================================================
+   08) Medios (solo en el contenido, no afecta al logo)
+   ========================================================= */
+main img, main video{
+  max-width:100%; height:auto; display:block;
+  border-radius:var(--radius);
+}
+
+/* =========================================================
+   09) Fondos exigidos por el ejercicio (≥2)
+       - Inicio: gradiente en #trailer
+       - Cine: imagen + velo
+   ========================================================= */
+#trailer{
+  padding:clamp(16px,4vw,32px);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:linear-gradient(180deg, rgba(144,164,174,.08), rgba(38,50,56,0));
+}
+#inicio-cine section[aria-labelledby="trailer-cine"]{
+  padding:var(--s4) var(--s3);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:
+    linear-gradient(180deg, rgba(38,50,56,.65), rgba(38,50,56,.85)),
+    url("img/thewitch.jpg") center/cover no-repeat;
+}
+
+/* =========================================================
+   10) Título de página (alineado con márgenes de .page)
+   ========================================================= */
+.page-title{
+  margin:0;
+  padding:clamp(12px,3vw,20px) 0;
+  border-bottom:1px solid var(--line);
+}
+@media (max-width:480px){ .page-title{ padding-top:var(--s3); } }
+
+/* =========================================================
+   11) Tablas y footer
+   ========================================================= */
+table{ width:100%; border-collapse:collapse; font-size:.95rem; color:var(--fg); }
+th, td{ border:1px solid var(--line); padding:.6rem .8rem; text-align:left; }
+caption{ text-align:left; margin-bottom:.5rem; color:var(--muted); }
+footer{ color:var(--muted); border-top:1px solid var(--line); }
+
+/* =========================================================
+   12) Accesibilidad: Reduced Motion
+   ========================================================= */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  nav a:hover,
+  nav a:focus-visible{
+    transform: none !important;
+  }
+}
