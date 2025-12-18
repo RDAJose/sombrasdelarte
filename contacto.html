@@ -12,83 +12,67 @@
 
 <body id="inicio-contacto">
 
-  <!-- ▸ HEADER a ancho completo -->
-  <header>
-    <div class="header-container">
-      <figure class="logo">
-        <img src="img/logoweb.png" alt="Sombras del Arte">
-      </figure>
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html"><span class="ico" aria-hidden="true">🏠</span>INICIO</a></li>
-          <li><a href="cine.html"><span class="ico" aria-hidden="true">🎬</span>CINE</a></li>
-          <li><a href="literatura.html"><span class="ico" aria-hidden="true">📚</span>LITERATURA</a></li>
-          <li><a href="contacto.html" class="active"><span class="ico" aria-hidden="true">✉️</span>CONTACTO</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ▸ CONTENIDO centrado -->
-  <div class="page">
-    <main>
-      <h1 class="page-title">Contacto</h1>
-
-      <section id="consulta" aria-labelledby="titulo-consulta" class="surface">
-        <h2 id="titulo-consulta">Formulario de consultas</h2>
-        <form action="#" method="post">
-          <!-- Campo 1 -->
-          <div>
-            <label for="nombre">Nombre</label><br>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-
-          <!-- Campo 2 -->
-          <div>
-            <label for="email">Correo</label><br>
-            <input type="email" id="email" name="email" required>
-          </div>
-
-          <!-- Campo 3 (desplegable) -->
-          <div>
-            <label for="tema">Tema</label><br>
-            <select id="tema" name="tema" required>
-              <option value="">-- Selecciona una opción --</option>
-              <option value="cine">Cine</option>
-              <option value="literatura">Literatura</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-
-          <!-- Botón envío -->
-          <div>
-            <button type="submit">Enviar</button>
-          </div>
-        </form>
-      </section>
-
-      <section id="form" aria-labelledby="contacto" class="surface">
-        <h2 id="contacto">Cómo encontrarnos</h2>
-        <address>
-          <p>Correo: <a href="mailto:info@sombrasdelarte.com">info@sombrasdelarte.com</a></p>
-        </address>
-        <p>También puedes ir a <a href="#redes">redes sociales</a>.</p>
-      </section>
-
-      <section id="redes" aria-labelledby="rrss" class="surface">
-        <h2 id="rrss">Redes Sociales</h2>
-        <ul>
-          <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      <p>© Sombras del Arte <time datetime="2025">2025</time></p>
-    </footer>
+<header>
+  <div class="header-container">
+    <figure class="logo">
+      <img src="img/logoweb.png" alt="Sombras del Arte">
+    </figure>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="cine.html">CINE</a></li>
+        <li><a href="literatura.html">LITERATURA</a></li>
+        <li><a href="contacto.html" class="active">CONTACTO</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
+<div class="page">
+  <main>
+    <h1 class="page-title">Contacto</h1>
+
+    <section class="surface">
+      <h2>Formulario de consultas</h2>
+
+      <!-- MENSAJE QUE CAMBIA CON JS -->
+      <p id="msg-form"></p>
+
+      <form id="form-consulta">
+        <div>
+          <label for="nombre">Nombre</label><br>
+          <input type="text" id="nombre" required>
+        </div>
+
+        <div>
+          <label for="email">Correo</label><br>
+          <input type="email" id="email" required>
+        </div>
+
+        <div>
+          <label for="tema">Tema</label><br>
+          <select id="tema" required>
+            <option value="">-- Selecciona --</option>
+            <option>Cine</option>
+            <option>Literatura</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <!-- BOTÓN PARA CAMBIAR ESTILO -->
+      <button id="btn-tema" type="button">Cambiar estilo</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Sombras del Arte <time datetime="2025">2025</time></p>
+  </footer>
+</div>
+
+<!-- JS EXTERNO -->
+<script src="scripts.js"></script>
 </body>
 </html>
