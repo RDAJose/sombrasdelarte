@@ -199,3 +199,15 @@ footer{ color:var(--muted); border-top:1px solid var(--line); }
     transform: none !important;
   }
 }
+
+/* Añadir estilo alternativo */
+.tema-claro{
+  --bg:#ECEFF1;
+  --fg:#263238;
+  --muted:#455A64;
+  --primary:#37474F;
+  --sfc1:#FFFFFF;
+  --sfc2:#CFD8DC;
+  --line:rgba(0,0,0,.12);
+}
+
