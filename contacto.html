@@ -34,6 +34,39 @@
     <main>
       <h1 class="page-title">Contacto</h1>
 
+      <section id="consulta" aria-labelledby="titulo-consulta" class="surface">
+        <h2 id="titulo-consulta">Formulario de consultas</h2>
+        <form action="#" method="post">
+          <!-- Campo 1 -->
+          <div>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <!-- Campo 2 -->
+          <div>
+            <label for="email">Correo</label><br>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <!-- Campo 3 (desplegable) -->
+          <div>
+            <label for="tema">Tema</label><br>
+            <select id="tema" name="tema" required>
+              <option value="">-- Selecciona una opción --</option>
+              <option value="cine">Cine</option>
+              <option value="literatura">Literatura</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <!-- Botón envío -->
+          <div>
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+
       <section id="form" aria-labelledby="contacto" class="surface">
         <h2 id="contacto">Cómo encontrarnos</h2>
         <address>
