@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sombras del Arte — Literatura</title>
+  <meta name="description" content="Sección de literatura: lecturas, citas y autores." />
+  <link rel="icon" href="img/logoweb.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="inicio-literatura">
+
+  <!-- ▸ HEADER a ancho completo -->
+  <header>
+    <div class="header-container">
+      <figure class="logo">
+        <img src="img/logoweb.png" alt="Sombras del Arte">
+      </figure>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html"><span class="ico" aria-hidden="true">🏠</span>INICIO</a></li>
+          <li><a href="cine.html"><span class="ico" aria-hidden="true">🎬</span>CINE</a></li>
+          <li><a href="literatura.html" class="active"><span class="ico" aria-hidden="true">📚</span>LITERATURA</a></li>
+          <li><a href="contacto.html"><span class="ico" aria-hidden="true">✉️</span>CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ▸ CONTENIDO centrado -->
+  <div class="page">
+    <main>
+      <h1 class="page-title">Literatura</h1>
+
+      <!-- ▸ FICHA DE OBRA -->
+      <section aria-labelledby="ficha-obra" class="surface">
+        <h2 id="ficha-obra">Ficha de obra</h2>
+        <dl>
+          <dt>Título</dt><dd>El Monje</dd>
+          <dt>Autor</dt><dd>Matthew Gregory Lewis</dd>
+          <dt>Género</dt><dd>Terror — Erótico</dd>
+          <dt>Año</dt><dd><time datetime="1796">1796</time></dd>
+        </dl>
+      </section>
+
+      <!-- ▸ OBRA CON CARÁTULA -->
+      <section aria-labelledby="media-obra" class="surface">
+        <h2 id="media-obra">Medios</h2>
+        <figure id="fuente-cita">
+          <img src="img/elmonje.jpg" alt="Portada de El Monje">
+          <figcaption>Portada de <cite>El Monje</cite> — © Ilustración de John Doe, usada con fines educativos.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ▸ CITA -->
+      <section aria-labelledby="citas" class="surface">
+        <h2 id="citas">Citas</h2>
+        <blockquote>
+          <p>“La ficción es la verdad dentro de la mentira”.</p>
+        </blockquote>
+        <p>Más citas en <a href="index.html#cita">Inicio</a>.</p>
+      </section>
+    </main>
+
+    <!-- ▸ FOOTER -->
+    <footer>
+      <p>
+        <a href="#inicio-literatura">Volver arriba</a> ·
+        © Sombras del Arte <time datetime="2025">2025</time>
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>
